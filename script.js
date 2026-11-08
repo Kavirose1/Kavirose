@@ -3,7 +3,26 @@ const popup = document.getElementById("popup");
 const closeBtn = document.getElementById("closeBtn");
 const blowBtn = document.getElementById("blowBtn");
 const flame = document.getElementById("flame");
-const music = document.getElementById("music");
+const music = document.getElementById("music");// Try to play music automatically
+window.addEventListener("load", async () => {
+    try {
+        await music.play();
+        console.log("Music started automatically!");
+    } catch (error) {
+        console.log("Waiting for user interaction...");
+    }
+});
+
+// Start music on the first interaction anywhere
+document.addEventListener("click", async () => {
+    if (music.paused) {
+        try {
+            await music.play();
+        } catch (error) {
+            console.log("Music could not start.");
+        }
+    }
+}, { once: true });
 const musicBtn = document.getElementById("musicBtn");
 const giftBox = document.getElementById("giftBox");
 const promiseCard = document.getElementById("promiseCard");
