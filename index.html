@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe4ec">
+  <title>Happy Birthday, My Love ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+  <section class="hero reveal">
+    <p class="eyebrow">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+    <h1>Happy Birthday<br><span>My Love ❤️</span></h1>
+    <p class="subtitle">Today is all about you, your smile, and the beautiful happiness you bring into my life.</p>
+
+    <div class="cake" aria-label="A birthday cake with a candle">
+      <div class="flame" id="flame"></div><div class="candle"></div>
+      <div class="cake-top"></div><div class="cake-middle"></div><div class="cake-bottom"></div>
+      <div class="cake-plate"></div>
+    </div>
+
+    <div class="hero-buttons">
+      <button class="primary-btn" id="surpriseBtn">Open Your Surprise 💌</button>
+      <button class="soft-btn" id="blowBtn">Blow the Candle 🕯️</button>
+    </div>
+    <p class="scroll-text">Scroll down for more love ↓</p>
+  </section>
+
+  <section class="message-section reveal">
+    <p class="eyebrow">WORDS FROM MY HEART</p>
+    <h2>A Little Letter For You 💌</h2>
+    <div class="letter glass">
+      <p>My love, on your special day, I want you to know how much you mean to me. You make my world brighter, my days happier, and my heart fuller.</p>
+      <p>I wish you endless happiness, beautiful memories, and all the love your heart can hold. No matter what life brings, I want to keep choosing you.</p>
+      <p class="signature">Forever yours ❤️</p>
+    </div>
+  </section>
+
+  <section class="gift-section reveal" id="promise">
+    <p class="eyebrow">A PROMISE FROM MY HEART</p>
+    <h2>One Little Gift… A Forever Promise 💍</h2>
+    <p class="gift-intro">I have something special for you. Tap the gift to open it.</p>
+
+    <button class="gift-box" id="giftBox" aria-label="Open your promise ring gift">
+      <span class="gift-lid"></span><span class="gift-bow">♡</span><span class="gift-body"></span>
+      <span class="gift-hint">TAP TO OPEN</span>
+    </button>
+
+    <div class="promise-card glass" id="promiseCard" aria-hidden="true">
+      <div class="ring-wrap">
+        <div class="ring"><span class="ring-stone">✦</span></div>
+        <div class="ring-glint">✧</div>
+      </div>
+      <p class="promise-kicker">MY PROMISE RING</p>
+      <h3>My love, I promise…</h3>
+      <p class="promise-copy">I promise to love you, respect you, stand beside you, and keep choosing you every day. I promise that my dream is to marry you and build a beautiful life together.</p>
+      <p class="question">Here is your promise ring…<br><strong>Will you be mine forever? Promise me. ❤️</strong></p>
+      <div class="promise-actions">
+        <button class="primary-btn" id="promiseBtn">I promise, forever 💖</button>
+        <button class="soft-btn" id="loveBtn">I’m yours ❤️</button>
+      </div>
+      <p class="response" id="promiseResponse" role="status"></p>
+    </div>
+  </section>
+
+  <section class="gallery-section reveal">
+    <p class="eyebrow">OUR LITTLE WORLD</p>
+    <h2>Our Beautiful Memories 📸</h2>
+    <div class="gallery">
+      <div class="photo"><img src="images/photo1.jpg" alt="Our memory 1" loading="lazy"></div>
+      <div class="photo"><img src="images/photo2.jpg" alt="Our memory 2" loading="lazy"></div>
+      <div class="photo"><img src="images/photo3.jpg" alt="Our memory 3" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="final-section reveal">
+    <p class="eyebrow">TODAY, TOMORROW, ALWAYS</p>
+    <h2>I Love You Forever ❤️</h2>
+    <p>You are my favorite person in this whole world.</p>
+    <p class="big-heart">♥</p>
+  </section>
+
+  <div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-content glass">
+      <button class="close-btn" id="closeBtn" aria-label="Close">×</button>
+      <div class="popup-heart">💖</div>
+      <h2 id="popupTitle">Happy Birthday, Baby! 🎂</h2>
+      <p>You are the most beautiful part of my life. No matter how many birthdays come and go, my love for you will always grow stronger.</p>
+      <p>May all your dreams come true. ❤️</p>
+    </div>
+  </div>
+
+  <audio id="music" loop><source src="music/song.mp3" type="audio/mpeg"></audio>
+  <button class="music-btn" id="musicBtn">🎵 Play Music</button>
+  <script src="script.js"></script>
+</body>
+</html>
