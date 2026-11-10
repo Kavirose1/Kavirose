@@ -912,3 +912,215 @@ p {
     opacity: 1 !important;
     visibility: visible !important;
 }
+
+/* =========================================
+   CRITICAL FIX — SHOW BIRTHDAY CONTENT
+   ========================================= */
+
+.reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+.reveal.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Popup visibility — matches script.js */
+.popup.show {
+    display: flex !important;
+}
+
+/* Promise card visibility */
+.promise-card.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Cake matching your HTML */
+.cake {
+    position: relative;
+    width: 220px;
+    height: 190px;
+    margin: 35px auto;
+}
+
+.cake-bottom {
+    position: absolute;
+    bottom: 15px;
+    width: 220px;
+    height: 75px;
+    background: linear-gradient(135deg, #e75480, #b83262);
+    border-radius: 15px 15px 25px 25px;
+}
+
+.cake-middle {
+    position: absolute;
+    bottom: 65px;
+    width: 220px;
+    height: 45px;
+    background: #ffb6c1;
+    border-radius: 50%;
+}
+
+.cake-top {
+    position: absolute;
+    bottom: 85px;
+    width: 220px;
+    height: 40px;
+    background: #fff0f5;
+    border-radius: 50%;
+    border: 3px solid #ffb6c1;
+}
+
+.cake-plate {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 240px;
+    height: 15px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(168, 50, 98, 0.2);
+}
+
+.candle {
+    position: absolute;
+    bottom: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 45px;
+    background: repeating-linear-gradient(
+        45deg,
+        white,
+        white 5px,
+        #e75480 5px,
+        #e75480 10px
+    );
+    border-radius: 5px;
+}
+
+.flame {
+    position: absolute;
+    bottom: 155px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 25px;
+    background: radial-gradient(circle, #fff7a8, #ff9f43, #ff6b6b);
+    border-radius: 50% 50% 50% 0;
+    animation: flicker 0.6s infinite alternate;
+}
+
+/* Gift box matching your HTML */
+.gift-box {
+    position: relative;
+    display: block;
+    width: 160px;
+    height: 150px;
+    margin: 40px auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.gift-body {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 140px;
+    height: 100px;
+    background: linear-gradient(135deg, #e75480, #b83262);
+    border-radius: 10px;
+}
+
+.gift-lid {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 160px;
+    height: 30px;
+    background: #ff8fab;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.gift-bow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
+    color: white;
+    z-index: 3;
+}
+
+.gift-hint {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    color: #8e2450;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+/* Gallery matching your HTML */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.photo {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(126, 34, 70, 0.15);
+    transition: 0.3s ease;
+}
+
+.photo:hover {
+    transform: translateY(-8px);
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Final heart matching HTML */
+.big-heart {
+    font-size: 85px;
+    color: #e75480;
+    animation: heartbeat 1.5s infinite;
+    filter: drop-shadow(0 0 20px rgba(231, 84, 128, 0.5));
+}
+
+/* Mobile gallery */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo img {
+        height: 300px;
+    }
+}
