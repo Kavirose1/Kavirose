@@ -896,3 +896,19 @@ p {
         transition-duration: 0.01ms !important;
     }
 }
+/* FIX: Make website content visible */
+.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+.hero,
+.message-section,
+.gift-section,
+.gallery-section,
+.final-section,
+.promise-section {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
