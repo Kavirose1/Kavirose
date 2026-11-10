@@ -78,16 +78,85 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,46px);color:#b8
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 @media(max-width:600px){.letter{padding:25px 20px}.photo{width:90%;max-width:300px}.gallery{flex-direction:column;align-items:center}.music-btn{bottom:12px;right:12px}.message-section,.gift-section,.gallery-section,.final-section{padding:65px 16px}.promise-card.show{padding:28px 18px}.hero-buttons{flex-direction:column;align-items:center}.hero-buttons button{width:min(100%,290px)}}
-body {
-    background-image:
-        linear-gradient(
-            rgba(255, 228, 236, 0.72),
-            rgba(255, 192, 213, 0.72)
-        ),
-        url("Background.jpg");
 
+/* DREAMY ROMANTIC BACKGROUND */
+body {
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+}
+
+/* Your background photo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -15px;
+    z-index: -2;
+
+    background-image: url("Background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+
+    filter: blur(8px) brightness(0.85) saturate(1.2);
+    transform: scale(1.03);
+}
+
+/* Soft pink and lavender cinematic overlay */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 192, 225, 0.35),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 210, 230, 0.58),
+            rgba(190, 150, 255, 0.35),
+            rgba(255, 225, 240, 0.55)
+        );
+}
+
+/* Dreamy glass effect */
+.glass {
+    background: rgba(255, 255, 255, 0.48);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow:
+        0 8px 32px rgba(160, 60, 110, 0.12),
+        inset 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Romantic glow on headings */
+h1, h2 {
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.55),
+        0 0 28px rgba(255, 150, 200, 0.25);
+}
+
+/* Floating hearts look softer */
+.heart {
+    filter: drop-shadow(0 0 8px rgba(255, 160, 210, 0.6));
+}
+
+/* Soft dreamy glow on the gift */
+.gift-box {
+    filter: drop-shadow(0 0 18px rgba(255, 180, 220, 0.5));
+}
+
+/* Mobile background behavior */
+@media (max-width: 768px) {
+    body::before {
+        background-position: center;
+        filter: blur(5px) brightness(0.9);
+    }
 }
