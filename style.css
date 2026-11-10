@@ -160,3 +160,100 @@ h1, h2 {
         filter: blur(2px) brightness(0.88);
     }
 }
+
+/* ===== MAKE ALL WEBSITE TEXT CLEAR & VISIBLE ===== */
+
+/* Main birthday heading */
+h1 {
+    color: #8f1748 !important;
+    text-shadow:
+        0 3px 8px rgba(255, 255, 255, 0.95),
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 4px 20px rgba(120, 20, 60, 0.25) !important;
+    font-weight: 700;
+}
+
+/* Pink heading span */
+h1 span {
+    color: #e62970 !important;
+    text-shadow:
+        0 2px 8px white,
+        0 0 18px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* All section headings */
+h2, h3 {
+    color: #941747 !important;
+    text-shadow:
+        0 2px 5px rgba(255, 255, 255, 0.95),
+        0 0 15px rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Paragraphs and regular text */
+p, .subtitle, .gift-intro, .promise-copy,
+.question, .scroll-text, .letter {
+    color: #681637 !important;
+    text-shadow:
+        0 1px 3px rgba(255, 255, 255, 0.95) !important;
+    font-weight: 500;
+}
+
+/* Small eyebrow text */
+.eyebrow, .promise-kicker {
+    color: #a51f55 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 5px white !important;
+}
+
+/* Highlight the birthday message */
+.letter, .promise-card, .popup-content {
+    background: rgba(255, 245, 250, 0.82) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(120, 20, 60, 0.18);
+}
+
+/* Promise message */
+.promise-card h3 {
+    color: #9c174c !important;
+}
+
+/* Buttons: bold, clear text */
+.primary-btn, .music-btn {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(100, 0, 30, 0.35);
+    box-shadow:
+        0 5px 20px rgba(160, 20, 70, 0.35),
+        0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* White buttons */
+.soft-btn {
+    color: #a51f55 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 2px white;
+    border: 1px solid #ffd0e0;
+}
+
+/* Final love section */
+.final-section h2 {
+    color: white !important;
+    text-shadow:
+        0 2px 8px rgba(120, 10, 50, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5) !important;
+}
+
+.final-section p {
+    color: white !important;
+    text-shadow: 0 2px 5px rgba(100, 0, 30, 0.5) !important;
+}
+
+/* Gallery captions and response text */
+.response, .signature {
+    color: #a01650 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 4px white !important;
+}
