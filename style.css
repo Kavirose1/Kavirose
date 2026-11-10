@@ -1,5 +1,7 @@
+
 /* =========================================
    ROMANTIC BIRTHDAY WEBSITE — COMPLETE CSS
+   NO BACKGROUND IMAGE
    ========================================= */
 
 /* RESET */
@@ -29,27 +31,18 @@ body {
     min-height: 100vh;
     position: relative;
     isolation: isolate;
-    background: linear-gradient(135deg, #ffe4ec, #ffc1d6, #fff0f5);
+    background: linear-gradient(
+        135deg,
+        #ffe4ec,
+        #ffc1d6,
+        #f8d7ff,
+        #fff0f5,
+        #ffd6e7
+    );
 }
 
-/* =========================================
-   DREAMY BACKGROUND IMAGE
-   ========================================= */
-
+/* DREAMY BACKGROUND OVERLAY */
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-    background-image: url("./Background.jpg");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(2px) brightness(0.82) saturate(1.15);
-    transform: scale(1.02);
-}
-
-body::after {
     content: "";
     position: fixed;
     inset: 0;
@@ -57,26 +50,23 @@ body::after {
     pointer-events: none;
     background:
         radial-gradient(
-            circle at 20% 20%,
-            rgba(255, 182, 193, 0.28),
+            circle at 15% 20%,
+            rgba(255, 182, 193, 0.55),
             transparent 40%
         ),
         radial-gradient(
-            circle at 80% 80%,
-            rgba(221, 160, 221, 0.25),
+            circle at 85% 80%,
+            rgba(221, 160, 221, 0.4),
             transparent 40%
         ),
-        linear-gradient(
-            135deg,
-            rgba(255, 228, 236, 0.28),
-            rgba(255, 192, 203, 0.25)
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 255, 255, 0.25),
+            transparent 60%
         );
 }
 
-/* =========================================
-   BUTTONS
-   ========================================= */
-
+/* BUTTONS */
 button {
     font-family: inherit;
     cursor: pointer;
@@ -118,10 +108,7 @@ button {
     background: #e75480;
 }
 
-/* =========================================
-   HERO SECTION
-   ========================================= */
-
+/* HERO SECTION */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -190,10 +177,7 @@ h1 span {
     text-shadow: 0 2px 8px white;
 }
 
-/* =========================================
-   CAKE
-   ========================================= */
-
+/* CAKE */
 .cake-container {
     margin: 30px auto;
     position: relative;
@@ -258,10 +242,7 @@ h1 span {
     box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
 }
 
-/* =========================================
-   SECTIONS
-   ========================================= */
-
+/* MAIN SECTIONS */
 .message-section,
 .gift-section,
 .gallery-section,
@@ -291,7 +272,6 @@ p {
 }
 
 /* GLASS EFFECT */
-
 .glass {
     background: rgba(255, 255, 255, 0.58);
     border: 1px solid rgba(255, 255, 255, 0.75);
@@ -301,10 +281,7 @@ p {
     -webkit-backdrop-filter: blur(14px);
 }
 
-/* =========================================
-   LETTER / MESSAGE
-   ========================================= */
-
+/* LETTER */
 .letter {
     max-width: 750px;
     margin: 40px auto;
@@ -332,10 +309,7 @@ p {
     margin-top: 25px;
 }
 
-/* =========================================
-   GIFT SECTION
-   ========================================= */
-
+/* GIFT SECTION */
 .gift-section {
     min-height: 70vh;
 }
@@ -420,10 +394,7 @@ p {
     transform: rotate(-25deg);
 }
 
-/* =========================================
-   PROMISE SECTION
-   ========================================= */
-
+/* PROMISE SECTION */
 .promise-section {
     padding: 90px 20px;
     text-align: center;
@@ -470,10 +441,7 @@ p {
     color: #8e2450;
 }
 
-/* =========================================
-   RING ANIMATION
-   ========================================= */
-
+/* RING */
 .ring-container {
     margin: 35px auto;
     width: 120px;
@@ -505,10 +473,7 @@ p {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
 }
 
-/* =========================================
-   RESPONSE
-   ========================================= */
-
+/* RESPONSE */
 .response {
     margin-top: 25px;
     font-size: 22px;
@@ -517,10 +482,7 @@ p {
     text-shadow: 0 2px 8px white;
 }
 
-/* =========================================
-   PHOTO GALLERY
-   ========================================= */
-
+/* PHOTO GALLERY */
 .gallery {
     max-width: 1100px;
     margin: 45px auto;
@@ -560,10 +522,7 @@ p {
     color: #8e2450;
 }
 
-/* =========================================
-   FINAL SECTION
-   ========================================= */
-
+/* FINAL SECTION */
 .final-section {
     min-height: 70vh;
     display: flex;
@@ -591,10 +550,7 @@ p {
     filter: drop-shadow(0 0 20px rgba(231, 84, 128, 0.5));
 }
 
-/* =========================================
-   POPUP
-   ========================================= */
-
+/* POPUP */
 .popup {
     position: fixed;
     inset: 0;
@@ -648,10 +604,7 @@ p {
     transform: rotate(90deg);
 }
 
-/* =========================================
-   MUSIC BUTTON
-   ========================================= */
-
+/* MUSIC BUTTON */
 .music-btn {
     position: fixed;
     bottom: 25px;
@@ -672,10 +625,7 @@ p {
     transform: scale(1.1);
 }
 
-/* =========================================
-   FLOATING HEARTS & SPARKLES
-   ========================================= */
-
+/* FLOATING HEARTS & SPARKLES */
 .floating-heart,
 .heart-float {
     position: fixed;
@@ -697,10 +647,7 @@ p {
     text-shadow: 0 0 12px #ffffff;
 }
 
-/* =========================================
-   REVEAL ANIMATION
-   ========================================= */
-
+/* REVEAL ANIMATION */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -712,10 +659,7 @@ p {
     transform: translateY(0);
 }
 
-/* =========================================
-   ANIMATIONS
-   ========================================= */
-
+/* ANIMATIONS */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -824,10 +768,7 @@ p {
     }
 }
 
-/* =========================================
-   TABLET RESPONSIVENESS
-   ========================================= */
-
+/* TABLET RESPONSIVENESS */
 @media (max-width: 768px) {
     .hero {
         min-height: 90vh;
@@ -866,18 +807,9 @@ p {
     .popup-content {
         padding: 30px 25px;
     }
-
-    body::before {
-        background-size: cover;
-        background-position: center;
-        filter: blur(2px) brightness(0.78) saturate(1.1);
-    }
 }
 
-/* =========================================
-   MOBILE RESPONSIVENESS
-   ========================================= */
-
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 480px) {
     h1 {
         font-size: 2.5rem;
@@ -951,18 +883,9 @@ p {
     .cake {
         transform: scale(0.85);
     }
-
-    body::before {
-        background-size: cover;
-        background-position: center;
-        filter: blur(2px) brightness(0.75) saturate(1.1);
-    }
 }
 
-/* =========================================
-   REDUCED MOTION ACCESSIBILITY
-   ========================================= */
-
+/* REDUCED MOTION ACCESSIBILITY */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
