@@ -78,3 +78,16 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,46px);color:#b8
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 @media(max-width:600px){.letter{padding:25px 20px}.photo{width:90%;max-width:300px}.gallery{flex-direction:column;align-items:center}.music-btn{bottom:12px;right:12px}.message-section,.gift-section,.gallery-section,.final-section{padding:65px 16px}.promise-card.show{padding:28px 18px}.hero-buttons{flex-direction:column;align-items:center}.hero-buttons button{width:min(100%,290px)}}
+body {
+    background-image:
+        linear-gradient(
+            rgba(255, 228, 236, 0.72),
+            rgba(255, 192, 213, 0.72)
+        ),
+        url("Background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
