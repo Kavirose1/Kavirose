@@ -3,7 +3,31 @@ const popup = document.getElementById("popup");
 const closeBtn = document.getElementById("closeBtn");
 const blowBtn = document.getElementById("blowBtn");
 const flame = document.getElementById("flame");
-const music = document.getElementById("music");
+const music = document.getElementById("music");// Automatically try to play music
+window.addEventListener("load", () => {
+    music.volume = 0.7;
+
+    music.play().catch(() => {
+        console.log("Autoplay blocked. Waiting for a tap.");
+    });
+});
+
+// Start music when she taps anywhere
+function startMusic() {
+    if (music.paused) {
+        music.play().then(() => {
+            musicBtn.textContent = "⏸ Pause Music";
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("touchstart", startMusic);
+}
+
+document.addEventListener("click", startMusic);
+document.addEventListener("touchstart", startMusic);
 const musicBtn = document.getElementById("musicBtn");
 const giftBox = document.getElementById("giftBox");
 const promiseCard = document.getElementById("promiseCard");
