@@ -144,3 +144,65 @@ function launchConfetti() {
     window.setTimeout(()=>piece.remove(), duration*1000+100);
   }
 }
+
+/* ===== BIRTHDAY VIDEO + BACKGROUND MUSIC CONTROL ===== */
+
+const playBirthdayVideoBtn = document.getElementById("playBirthdayVideo");
+const birthdayVideoContainer = document.getElementById("birthdayVideoContainer");
+const birthdayVideo = document.getElementById("birthdayVideo");
+const backgroundMusic = document.getElementById("music");
+const backgroundMusicBtn = document.getElementById("musicBtn");
+
+if (playBirthdayVideoBtn && birthdayVideoContainer && birthdayVideo) {
+
+    playBirthdayVideoBtn.addEventListener("click", async () => {
+
+        birthdayVideoContainer.style.display = "block";
+
+        // Stop the website background music
+        if (backgroundMusic) {
+            backgroundMusic.pause();
+        }
+
+        // Scroll smoothly to the video
+        birthdayVideoContainer.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        try {
+            await birthdayVideo.play();
+
+            playBirthdayVideoBtn.textContent = "Enjoy your surprise 💗";
+
+        } catch (error) {
+            console.log("Video playback needs user interaction:", error);
+            playBirthdayVideoBtn.textContent = "Press play on the video 💕";
+        }
+    });
+
+    // Ensure background music stops whenever the video starts
+    birthdayVideo.addEventListener("play", () => {
+        if (backgroundMusic) {
+            backgroundMusic.pause();
+        }
+    });
+
+    // Prevent the music button from restarting music during the video
+    if (backgroundMusicBtn) {
+        backgroundMusicBtn.addEventListener("click", () => {
+            if (!birthdayVideo.paused && backgroundMusic) {
+                backgroundMusic.pause();
+            }
+        });
+    }
+
+    // When video ends, keep the background music turned off
+    birthdayVideo.addEventListener("ended", () => {
+        if (backgroundMusic) {
+            backgroundMusic.pause();
+        }
+
+        playBirthdayVideoBtn.textContent = "Watch your surprise again 💌";
+    });
+}
