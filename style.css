@@ -1147,32 +1147,50 @@ section p {
     transform: none !important;
 }
 
-/* ===== REDUCE SPACE BETWEEN GIFT AND PHOTO GALLERY ===== */
 
-/* Reduce section padding */
-section {
-    padding-top: 25px !important;
-    padding-bottom: 25px !important;
+/* ===== FIX GAP BETWEEN GIFT BOX AND PHOTO GALLERY ===== */
+
+/* Gift section */
+.gift-section {
+    padding-top: 35px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
-/* Promise section */
-#promise {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
+/* Gift heading and intro */
+.gift-section h2 {
+    margin-bottom: 12px !important;
+}
+
+.gift-intro {
+    margin-bottom: 10px !important;
+}
+
+/* Gift box */
+.gift-box {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Promise card */
+.promise-card {
+    margin-top: 15px !important;
+    margin-bottom: 0 !important;
 }
 
 /* Photo gallery section */
 .gallery-section {
-    padding-top: 15px !important;
-    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+    margin-top: 0 !important;
 }
 
-/* Reduce gallery heading spacing */
+/* Gallery title */
 .gallery-section h2 {
     margin-bottom: 15px !important;
 }
 
-/* Reduce gallery top margin */
+/* Photo frames */
 .gallery {
-    margin-top: 20px !important;
+    margin-top: 15px !important;
+    margin-bottom: 20px !important;
 }
