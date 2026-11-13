@@ -206,26 +206,3 @@ if (playBirthdayVideoBtn && birthdayVideoContainer && birthdayVideo) {
         playBirthdayVideoBtn.textContent = "Watch your surprise again 💌";
     });
 }
-
-/* ===== KEEP MUSIC BUTTON LABEL IN SYNC ===== */
-
-const music = document.getElementById("music");
-const musicButton = document.getElementById("musicBtn");
-
-function updateMusicButton() {
-    if (!music || !musicButton) return;
-
-    if (music.paused) {
-        musicButton.innerHTML = "🎵 Play Music";
-    } else {
-        musicButton.innerHTML = "🎵 Pause Music";
-    }
-}
-
-if (music && musicButton) {
-    music.addEventListener("play", updateMusicButton);
-    music.addEventListener("pause", updateMusicButton);
-    music.addEventListener("ended", updateMusicButton);
-
-    updateMusicButton();
-}
