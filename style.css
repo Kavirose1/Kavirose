@@ -1132,3 +1132,17 @@ section p {
         font-size: 13px;
     }
 }
+
+/* ===== EMERGENCY FIX: RESTORE HIDDEN WEBSITE CONTENT ===== */
+
+.reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+.reveal.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
