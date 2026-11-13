@@ -995,3 +995,83 @@ section p {
         top: -20px;
     }
 }
+
+/* ===== SPECIAL BIRTHDAY VIDEO ===== */
+
+.birthday-video-section {
+    width: 100%;
+    margin: 25px auto 30px;
+    text-align: center;
+}
+
+.video-intro {
+    font-family: 'Playfair Display', serif;
+    color: #b77da8;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+#playBirthdayVideo {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #e99abc, #b99ae9);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    box-shadow: 0 8px 25px rgba(193, 132, 190, 0.3);
+    animation: videoButtonGlow 2s ease-in-out infinite;
+
+    transition: transform 0.3s ease;
+}
+
+#playBirthdayVideo:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+@keyframes videoButtonGlow {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(193, 132, 190, 0.25);
+    }
+    50% {
+        box-shadow: 0 8px 32px rgba(226, 132, 184, 0.55);
+    }
+}
+
+#birthdayVideoContainer {
+    max-width: 500px;
+    width: 100%;
+    margin: 25px auto 0;
+
+    padding: 8px;
+    border-radius: 22px;
+
+    background: linear-gradient(135deg, #f5c8df, #d5c2f6);
+    box-shadow: 0 15px 35px rgba(165, 111, 173, 0.25);
+}
+
+#birthdayVideo {
+    width: 100%;
+    display: block;
+    max-height: 70vh;
+
+    border-radius: 15px;
+    background: #000;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    #birthdayVideoContainer {
+        width: 100%;
+        padding: 5px;
+        border-radius: 16px;
+    }
+
+    #birthdayVideo {
+        border-radius: 12px;
+    }
+}
