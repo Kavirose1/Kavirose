@@ -1194,3 +1194,15 @@ section p {
     margin-top: 15px !important;
     margin-bottom: 20px !important;
 }
+
+/* ===== FIX: HIDDEN PROMISE CARD SHOULD NOT CREATE A GAP ===== */
+
+#promiseCard.promise-card {
+    display: none !important;
+    margin: 0 auto !important;
+}
+
+#promiseCard.promise-card.show {
+    display: block !important;
+    margin: 20px auto 0 !important;
+}
