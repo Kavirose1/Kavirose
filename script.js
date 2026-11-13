@@ -111,15 +111,15 @@ function createSparkle() {
 }
 window.setInterval(createSparkle, 900);
 
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, {threshold: 0.12});
-document.querySelectorAll(".reveal").forEach(section => revealObserver.observe(section));
+
+/* ===== FIX: MAKE WEBSITE CONTENT VISIBLE ===== */
+
+document.querySelectorAll(".reveal").forEach(section => {
+    section.classList.add("visible");
+    section.style.opacity = "1";
+    section.style.visibility = "visible";
+    section.style.transform = "none";
+});
 
 function launchConfetti() {
   const colors = ["#e75480","#ffd166","#fff0f5","#c084fc","#fb7185"];
