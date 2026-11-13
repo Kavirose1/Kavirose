@@ -1146,3 +1146,33 @@ section p {
     visibility: visible !important;
     transform: none !important;
 }
+
+/* ===== REDUCE SPACE BETWEEN GIFT AND PHOTO GALLERY ===== */
+
+/* Reduce section padding */
+section {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+}
+
+/* Promise section */
+#promise {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+/* Photo gallery section */
+.gallery-section {
+    padding-top: 15px !important;
+    padding-bottom: 20px !important;
+}
+
+/* Reduce gallery heading spacing */
+.gallery-section h2 {
+    margin-bottom: 15px !important;
+}
+
+/* Reduce gallery top margin */
+.gallery {
+    margin-top: 20px !important;
+}
