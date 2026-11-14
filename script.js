@@ -17,12 +17,17 @@ window.addEventListener("load", () => {
 });
 
 
-// Start music when she taps anywhere
-function startMusic() {
+
+/* Start music on first interaction, except when clicking music controls */
+
+function startMusic(event) {
+    // Don't restart music when the music button is clicked
+    if (event.target.closest("#musicBtn")) {
+        return;
+    }
+
     if (music.paused) {
-        music.play().then(() => {
-            musicBtn.textContent = "⏸ Pause Music";
-        }).catch(error => {
+        music.play().catch(error => {
             console.log(error);
         });
     }
@@ -33,6 +38,7 @@ function startMusic() {
 
 document.addEventListener("click", startMusic);
 document.addEventListener("touchstart", startMusic);
+
 const musicBtn = document.getElementById("musicBtn");
 const giftBox = document.getElementById("giftBox");
 const promiseCard = document.getElementById("promiseCard");
